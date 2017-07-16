@@ -1,0 +1,16 @@
+{
+  "name": "tezos.js",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "bsb",
+    "watch": "bsb -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bs-platform": "^1.8.1"
+  }
+}
