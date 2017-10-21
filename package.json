@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "bsb",
-    "watch": "bsb -w",
+    "bs": "bsb",
+    "bs:watch": "bsb -w",
+    "webpack": "webpack",
+    "webpack:watch": "webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "bs-platform": "^1.8.1"
+    "bs-platform": "^1.9.3",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
   }
 }

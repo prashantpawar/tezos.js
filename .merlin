@@ -2,7 +2,8 @@
 FLG -ppx /Users/renegade/development/tezos/tezos.js/node_modules/bs-platform/bin/bsppx.exe
 S /Users/renegade/development/tezos/tezos.js/node_modules/bs-platform/lib/ocaml
 B /Users/renegade/development/tezos/tezos.js/node_modules/bs-platform/lib/ocaml
-FLG -nostdlib -no-alias-deps -color always -w -40+6+7+27+32..39+44+45
+FLG -nostdlib -no-alias-deps -color always
+FLG -w -40+6+7+27+32..39+44+45
 S src
 B lib/bs/src
 ####BSB GENERATED: NO EDIT}
