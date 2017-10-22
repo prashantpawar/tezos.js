@@ -2,4 +2,6 @@ open Tezos
 
 
 let () =
-  blocks ()
+  Js.log "Start";
+  let output = blocks () in
+  Js.log (output);
