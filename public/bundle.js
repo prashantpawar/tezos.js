@@ -4234,9 +4234,9 @@ var Web_xmlhttprequest = __webpack_require__(14);
 
 var StringMap = $$Map.Make([$$String.compare]);
 
-function blocks() {
+function query(endpoint, body) {
   var xhr = new XMLHttpRequest();
-  Web_xmlhttprequest.open_("POST", "https://tezrpc.me/api/blocks/head", /* None */0, /* None */0, /* None */0, xhr);
+  Web_xmlhttprequest.open_("POST", "https://tezrpc.me/api" + endpoint, /* None */0, /* None */0, /* None */0, xhr);
   Web_xmlhttprequest.set_onload((function () {
           var match = Web_xmlhttprequest.getAllResponseHeadersAsDict(xhr);
           var headers;
@@ -4256,11 +4256,15 @@ function blocks() {
           console.log(response);
           return /* () */0;
         }), xhr);
-  Web_xmlhttprequest.send(/* EmptyBody */0, xhr);
-  return /* () */0;
+  return Web_xmlhttprequest.send(body, xhr);
+}
+
+function blocks() {
+  return query("/blocks/head", /* EmptyBody */0);
 }
 
 exports.StringMap = StringMap;
+exports.query     = query;
 exports.blocks    = blocks;
 /* StringMap Not a pure module */
 

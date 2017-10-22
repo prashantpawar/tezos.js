@@ -16,8 +16,7 @@ type response =
   ; body : responseBody
   }
 
-let blocks () =
-  let endpoint = "/blocks/head" in
+let query endpoint body =
   let xhr = Web.XMLHttpRequest.create () in
   let setEvent ev cb = ev cb xhr in
   let () = Web.XMLHttpRequest.open_ "POST" ("https://tezrpc.me/api" ^ endpoint) xhr in
@@ -36,6 +35,8 @@ let blocks () =
           } in
         Js.log response
     ) in
-    let () = Web.XMLHttpRequest.send EmptyBody xhr in
-  ()
+    Web.XMLHttpRequest.send body xhr
     
+let blocks () =
+  let endpoint = "/blocks/head" in
+  query endpoint EmptyBody
