@@ -4263,9 +4263,15 @@ function blocks() {
   return query("/blocks/head", /* EmptyBody */0);
 }
 
-exports.StringMap = StringMap;
-exports.query     = query;
-exports.blocks    = blocks;
+function getBalance(pkh) {
+  var endpoint = "/blocks/prevalidation/proto/context/contracts/" + (pkh + "/balance");
+  return query(endpoint, /* EmptyBody */0);
+}
+
+exports.StringMap  = StringMap;
+exports.query      = query;
+exports.blocks     = blocks;
+exports.getBalance = getBalance;
 /* StringMap Not a pure module */
 
 
