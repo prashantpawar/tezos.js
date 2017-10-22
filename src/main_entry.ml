@@ -1,6 +1,3 @@
-open Tezos
-
 let () =
-  Js.log "Start";
-  let output = blocks () in
+  let output = Rpc.blocks () in
   Js.log (output);
